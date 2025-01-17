@@ -1,17 +1,11 @@
 package com.example.springsecurity.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Table(name = "users")
 @Entity(name = "User")
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
 public class User {
 
     @Id
@@ -35,6 +29,9 @@ public class User {
         this.email = email;
         this.password = password;
         this.roles = roles;
+    }
+
+    public User() {
     }
 
     public static UserBuilder builder() {
